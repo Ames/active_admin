@@ -20,6 +20,9 @@ module ActiveAdmin
       table_column = (@column =~ /\./) ? @column :
         [table, active_admin_config.resource_quoted_column_name(@column)].compact.join(".")
 
+      # mongo hack:
+      table_column = @column
+
       [table_column, @op, ' ', @order].compact.join
     end
   end
