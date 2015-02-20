@@ -11,7 +11,7 @@ class ActiveAdmin.Popover
       onClickActionItemCallback: null
     }
 
-    @options = $.extend defaults, options
+    @options = $.extend defaults, @options
     @isOpen  = false
 
     unless (@$popover = $ @$element.attr 'href').length
